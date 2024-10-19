@@ -149,7 +149,7 @@ states/idle/position = Vector2(382.675, 100)
 states/walk/node = SubResource("AnimationNodeAnimation_cx0k7")
 states/walk/position = Vector2(382.409, 230.25)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_rm1q2"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_dtex4"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_6xuvw"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_f3f7t"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_haixo"), "walk", "attack", SubResource("AnimationNodeStateMachineTransition_ym0dd")]
-graph_offset = Vector2(114.691, 56.1104)
+graph_offset = Vector2(-111.938, 56.1104)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dpx54"]
 size = Vector2(20.9223, 31.7961)
@@ -182,8 +182,8 @@ autoplay = "idle"
 tree_root = SubResource("AnimationNodeStateMachine_7tnyc")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/attack = false
-parameters/conditions/idle = false
-parameters/conditions/walk = true
+parameters/conditions/idle = true
+parameters/conditions/walk = false
 
 [node name="AttackRegion" type="Area2D" parent="BEUPlayer"]
 process_mode = 4
